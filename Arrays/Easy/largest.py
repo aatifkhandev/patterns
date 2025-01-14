@@ -52,3 +52,26 @@ if __name__ == "__main__":
 # }
 
 # }
+
+
+
+# import java.util.*;
+
+# public class FindLargestElement {
+#     public static int findLargest(int[] arr, int n) {
+#         int maximum = arr[0];  // Initialize with the first element
+#         for (int i = 1; i < n; i++) {  // Start loop from index 1
+#             if (maximum < arr[i]) {
+#                 maximum = arr[i];
+#             }
+#         }
+#         return maximum;
+#     }
+
+#     public static void main(String[] args) {
+#         int[] arr = {1, 2, 3, 4, 5};
+#         int n = arr.length;
+#         int result = findLargest(arr, n);
+#         System.out.println("The largest element in the array is: " + result);
+#     }
+# }
