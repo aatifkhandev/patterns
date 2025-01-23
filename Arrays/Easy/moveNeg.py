@@ -10,5 +10,16 @@ def swapOne(a,b):
     b=temp
     return a,b
     
-swapOne(4,1)
-print(f'a = {a}, b = {b}')
+def moveNeg(arr:List[int],n:int)->int:
+    j=n-1
+    for i in range(len(arr)):
+        if arr[i]<0:
+            swapOne(arr[i],arr[j])
+            j+=1
+            
+    return arr
+
+
+arr=[1,-2,-3,4,5]
+n=5
+print(moveNeg(arr,n))
