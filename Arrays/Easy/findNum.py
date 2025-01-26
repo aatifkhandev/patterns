@@ -17,9 +17,26 @@ def findNum(arr:List[int],n:int)->int:
     
     return -1
 
+def findNumOptimized(arr:List[int],n:int)->int:
+   
+    n = len(arr)
+
+    
+    hashmap = {}
+    for num in arr:
+        hashmap[num] = hashmap.get(num, 0) + 1
+
+    for num, count in hashmap.items():
+        if count == 1:
+            return num
+
+    return -1
+    
+       
+
 
 arr = [4,1,2,1,2]
 n = len(arr)
-print(findNum(arr,n))
+print(findNumOptimized(arr,n))
      
     
