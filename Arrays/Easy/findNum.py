@@ -35,7 +35,7 @@ def findNumOptimized(arr:List[int],n:int)->int:
        
 
 
-arr = [4,1,2,1,2]
+arr = [4,1,2,1,2,4,7]
 n = len(arr)
 print(findNumOptimized(arr,n))
      
