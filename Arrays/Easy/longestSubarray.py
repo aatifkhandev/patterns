@@ -60,11 +60,33 @@ def longestSubArrayBetter(arr: [int], k: int) -> int:
 
     return maxLen
             
-            
+
+def longestSubArrayOptimal(arr: [int], k: int) -> int:
+    n = len(arr) # size of the array.
+
+    left, right = 0, 0 # 2 pointers
+    Sum = arr[0]
+    maxLen = 0
+    while right < n:
+        # if sum > k, reduce the subArray from left
+        # until sum becomes less or equal to k:
+        while left <= right and Sum > k:
+            Sum -= arr[left]
+            left += 1
+
+        # if sum = k, update the maxLen i.e. answer:
+        if Sum == k:
+            maxLen = max(maxLen, right - left + 1)
+
+        # Move forward the right pointer:
+        right += 1
+        if right < n: Sum += arr[right]
+
+    return maxLen
             
             
             
 arr = [2,3,5,1,9]
 n = len(arr)
 k = 10
-print(longestSubArrayBetter(arr,k))
+print(longestSubArrayOptimal(arr,k))
