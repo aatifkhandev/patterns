@@ -53,14 +53,41 @@ int longestSubarrayNew(int arr[] , int k, int n){ //BruteForce : Generating all 
   
 }
 
+int longestSubarrayBetter(vector<int>arr,long long k , int n){
+    map<long long , int>preSum;
+    long long sum = 0;
+    int maxLen = 0;
+    for (int i = 0; i < n; i++) {
+        //calculate the prefix sum till index i:
+        sum += arr[i];
+
+        // if the sum = k, update the maxLen:
+        if (sum == k) {
+            maxLen = max(maxLen, i + 1);
+        }
+        // calculate the sum of remaining part i.e. x-k:
+        long long rem = sum - k;
+       
+       if (preSum.find(rem) != preSum.end()) {
+            int len = i - preSum[rem];
+            maxLen = max(maxLen, len);
+        }
+
+        //Finally, update the map checking the conditions:
+        if (preSum.find(sum) == preSum.end()) {
+            preSum[sum] = i;
+        }
+}
+return maxLen;
+}
 
 
 int main(){
 
-int arr[] = {2,3,5,1,9};
+vector<int>arr = {2,3,5,1,9};
 int n = 5;
-    int k = 10;
-    int len = longestSubarrayNew(arr, k , n) ;
+    long long  k = 10;
+    int len = longestSubarrayBetter(arr, k , n) ;
     cout << "The length of the longest subarray is: " << len << "\n";
     return 0;
 
