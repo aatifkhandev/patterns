@@ -16,11 +16,27 @@ def longestSubArray(arr:List[int], n:int,k:int)->int:
             if(sum==k):
                  len = max(len,j-i+1)
     return len
+
+
+def longestSubArrayNew(arr:List[int], n:int,k:int)->int:
+    len = 0
+    
+    for i in range(n):
+        sum=0
+        for j in range(i,n):
+            
+            sum+=arr[j]
+                
+            if(sum==k):
+                 len = max(len,j-i+1)
+    return len
             
             
             
             
-arr = [1,2,3,4,5]
+            
+            
+arr = [2,3,5,1,9]
 n = len(arr)
-k = 5
-print(longestSubArray(arr,n,k))
+k = 10
+print(longestSubArrayNew(arr,n,k))
