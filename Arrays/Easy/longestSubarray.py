@@ -30,7 +30,35 @@ def longestSubArrayNew(arr:List[int], n:int,k:int)->int:
             if(sum==k):
                  len = max(len,j-i+1)
     return len
-            
+
+
+def longestSubArrayBetter(arr: [int], k: int) -> int:
+    n = len(arr) # size of the array.
+
+    preSumMap = {}
+    Sum = 0
+    maxLen = 0
+    for i in range(n):
+        # calculate the prefix sum till index i:
+        Sum += arr[i]
+
+        # if the sum = k, update the maxLen:
+        if Sum == k:
+            maxLen = max(maxLen, i + 1)
+
+        # calculate the sum of remaining part i.e. x-k:
+        rem = Sum - k
+
+        # Calculate the length and update maxLen:
+        if rem in preSumMap:
+            length = i - preSumMap[rem]
+            maxLen = max(maxLen, length)
+
+        # Finally, update the map checking the conditions:
+        if Sum not in preSumMap:
+            preSumMap[Sum] = i
+
+    return maxLen
             
             
             
@@ -39,4 +67,4 @@ def longestSubArrayNew(arr:List[int], n:int,k:int)->int:
 arr = [2,3,5,1,9]
 n = len(arr)
 k = 10
-print(longestSubArrayNew(arr,n,k))
+print(longestSubArrayBetter(arr,k))
