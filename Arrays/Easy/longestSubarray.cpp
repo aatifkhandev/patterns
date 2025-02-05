@@ -31,14 +31,36 @@ int longestSubarray(int arr[] , int k, int n){ //BruteForce : Generating all sub
   
 }
 
+int longestSubarrayNew(int arr[] , int k, int n){ //BruteForce : Generating all subArray's
+ 
+ int len = 0;
+
+ for(int i=0;i<n;i++){
+    int sum=0;
+    for(int j = i ;j<n; j++){
+
+       
+
+        
+            sum+=arr[j];
+        
+        if(sum==k){
+            len = max(len , j-i+1);
+        }
+    }
+ }
+ return len;
+  
+}
+
 
 
 int main(){
 
-int arr[] = {1, 2, 3, 4, 5};
+int arr[] = {2,3,5,1,9};
 int n = 5;
-    int k = 5;
-    int len = longestSubarray(arr, k , n) ;
+    int k = 10;
+    int len = longestSubarrayNew(arr, k , n) ;
     cout << "The length of the longest subarray is: " << len << "\n";
     return 0;
 
