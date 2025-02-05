@@ -81,13 +81,40 @@ int longestSubarrayBetter(vector<int>arr,long long k , int n){
 return maxLen;
 }
 
+int longestSubarrayOptimal(vector<int>& arr, long long k) {
+    int n = arr.size(); 
+
+    int left = 0, right = 0; // 2 pointers
+    long long sum = arr[0];
+    int maxLen = 0;
+    while (right < n) {
+        // if sum > k, reduce the subarray from left
+        // until sum becomes less or equal to k:
+        while (left <= right && sum > k) {
+            sum -= arr[left];
+            left++;
+        }
+
+        // if sum = k, update the maxLen i.e. answer:
+        if (sum == k) {
+            maxLen = max(maxLen, right - left + 1);
+        }
+
+        // Move forward thw right pointer:
+        right++;
+        if (right < n) sum += arr[right];
+    }
+
+    return maxLen;
+}
+
 
 int main(){
 
 vector<int>arr = {2,3,5,1,9};
 int n = 5;
     long long  k = 10;
-    int len = longestSubarrayBetter(arr, k , n) ;
+    int len = longestSubarrayOptimal(arr, k ) ;
     cout << "The length of the longest subarray is: " << len << "\n";
     return 0;
 
