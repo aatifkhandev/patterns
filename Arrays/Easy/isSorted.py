@@ -6,6 +6,6 @@ def isSorted(arr:List[int],n:int)->int:
         
     return True
 
-arr=[1,2,7,4]
+arr=[1,2,4]
 n=len(arr)
 print(isSorted(arr,n))
