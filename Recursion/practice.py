@@ -7,7 +7,7 @@ def printLine(count):
     count+=1
     
     print(count)
-    printLine(count)
+    printLine(count+1)
     
     
 printLine(count)
