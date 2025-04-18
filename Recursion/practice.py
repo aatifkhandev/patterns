@@ -1,13 +1,11 @@
 
 count = 0
-def printLine(count):
-    
-    if count >=10:
+def Aatif(count):
+    if count>=10:
         return
     count+=1
     
     print(count)
-    printLine(count+1)
+    Aatif(count)
     
-    
-printLine(count)
+Aatif(count)
