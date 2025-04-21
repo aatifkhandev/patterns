@@ -1,3 +1,4 @@
+# Recursion
 # Print name 5 times
 
 
@@ -9,7 +10,7 @@ def PrintName(name,count):
     PrintName(name,count)
     
 
-PrintName("aatif",0)
+# PrintName("aatif",0)
 
 
 # Print Linearly from 1 to N
@@ -21,7 +22,7 @@ def Linearly(i,n):
     # i+=1
     Linearly(i+1,n)
     
-Linearly(1,10)
+# Linearly(1,10)
 
 
 
@@ -34,5 +35,22 @@ def NonLinearly(i,n):
     # i+=1
     NonLinearly(i-1,n)
     
-NonLinearly(5,1)
+# NonLinearly(7,7)
+
+
+# BackTrack
+
+# Print from 1 to N 
+
+def LinearBackTrack(i,n):
+    if i<1:
+        return
+    LinearBackTrack(i-1,n)
+    print(i)
+    
+n = int(input("Enter a number"))
+# LinearBackTrack(n,n)
+
+
+    
 
