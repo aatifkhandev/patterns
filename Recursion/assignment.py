@@ -34,5 +34,5 @@ def NonLinearly(i,n):
     # i+=1
     NonLinearly(i-1,n)
     
-NonLinearly(10,1)
+NonLinearly(5,1)
 
