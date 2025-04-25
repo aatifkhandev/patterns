@@ -48,9 +48,21 @@ def LinearBackTrack(i,n):
     LinearBackTrack(i-1,n)
     print(i)
     
-n = int(input("Enter a number"))
+# n = int(input("Enter a number"))
 # LinearBackTrack(n,n)
 
 
+# Print from N to 1
+
+def NonLinearBackTrack(i,n):
+    if(i>n):
+        return
+    
+    NonLinearBackTrack(i+1,n)
+    print(i)
+    
+n = int(input("Enter a number"))
+NonLinearBackTrack(n,n)
+    
     
 
