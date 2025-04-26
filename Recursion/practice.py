@@ -1,24 +1,35 @@
 
-# count = 0
-# def Aatif(count):
+# def f(count):
 #     if count>=10:
 #         return
+#     print(count)
 #     count+=1
     
-#     print(count)
-#     Aatif(count)
+#     f(count)
     
-# Aatif(count)
 
-count = 0
+# f(count)
 
-def f(count):
-    if count>=10:
+def printName(count,name):
+    if count==5:
         return
-    print(count)
-    count+=1
     
-    f(count)
+    print(name)
+    
+    printName(count+1,name)
     
 
-f(count)
+
+# printName(0,"aatif")
+
+# Non linear from n to 1 -> 10 - 1
+
+def nonL(i,n):
+    if i<=1:
+        return
+    print(i)
+    nonL(i-1,n)
+    
+
+n = int(input("enter a number"))
+nonL(10,n)
