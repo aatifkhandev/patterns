@@ -8,14 +8,16 @@
 # print(my_sum(1,5))
 
 
-def sumRecursive(i,n):
-   
-    if i>n:
-        return 0
-    sumRecursive(i+1,n)
-    return i+sumRecursive(i+1,n)
-
-
-print(sumRecursive(1,5))
+def sumRecursive(i,sum):
+    if i<1:
+        print(sum)
+        return
+    
+    sumRecursive(i-1,sum+i)
+    
+    
+n = int(input("Enter a number"))
+sumRecursive(n,0)
+        
     
     
