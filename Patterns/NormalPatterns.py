@@ -87,4 +87,22 @@ def inverted(n):
         print()
         
 
-inverted(5)
+# inverted(5)
+
+
+
+# Pattern - 6: Inverted Numbered Right Pyramid
+
+
+# 1 2 3
+# 1 2
+# 1
+
+def invertedNumber(n):
+    for i in range(n):
+        for j in range(1,n-i+1):
+            print(j,end=' ')
+        print()
+        
+        
+invertedNumber(5)
