@@ -52,3 +52,39 @@ def RightNumbered(n):
     
 # RightNumbered(5)
 
+
+
+# Pattern - 4: Right-Angled Number Pyramid - II
+
+# 1
+# 2 2
+# 3 3 3
+# 4 4 4 4
+# 5 5 5 5 5
+
+def RightNumberPyramid(n):
+    for i in range(1,n+1):
+        for j in range(1,i+1):
+            print(i,end=' ')
+        print()
+            
+    
+    
+    
+# RightNumberPyramid(5)
+
+
+# Pattern-5: Inverted Right Pyramid
+
+# * * *
+# * * 
+# *
+
+def inverted(n):
+    for i in range(n):
+        for j in range(n-i):
+            print("*",end=' ')
+        print()
+        
+
+inverted(5)
