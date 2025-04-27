@@ -33,4 +33,22 @@ def RightAngled(n):
     
     
     
-RightAngled(5)
+# RightAngled(5)
+
+
+
+# Pattern - 3: Right-Angled Number Pyramid
+# 1
+# 1 2 
+# 1 2 3
+
+def RightNumbered(n):
+    for i in range(1,n+1):
+        for j in range(1,i+1):
+            print(j,end=' ')
+        print()
+    
+    
+    
+# RightNumbered(5)
+
