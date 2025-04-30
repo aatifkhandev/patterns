@@ -43,3 +43,23 @@ def triangle(n):
         
 # triangle(5)
 
+
+
+# Pattern-13: Increasing Letter Triangle Pattern
+
+# A
+# A B
+# A B C
+# A B C D
+# A B C D E
+# A B C D E F
+
+def letters(n):
+    for i in range(1,n+1):
+        for j in range(i):
+              # Print letter starting from 'A' + j
+            print(chr(65 + j), end=' ')  # chr(65) is 'A'
+        print()
+        
+        
+letters(5)
