@@ -105,4 +105,25 @@ def invertedNumber(n):
         print()
         
         
-invertedNumber(5)
+# invertedNumber(5)
+
+
+
+# Pattern - 7: Star Pyramid
+
+#  *  
+# *** 
+# *****
+
+def star(n):
+    for i in range(n):
+        for j in range(n-i-1):
+            print(" ",end='')
+        for j in range(2*i+1):
+            print("*", end='')
+        for j in range(n-i-1):
+            print(" ",end=' ')
+        print()
+
+
+star(5)
