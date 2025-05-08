@@ -1,12 +1,13 @@
-# name = "aatif"
-# def count(counter):
+name = "aatif"
+def count(counter):
     
-#     if counter==5:
-#         return
-#     print(name)
-#     count(counter+1)
+    if counter==5:
+        return
+    print(name)
+    count(counter+1)
     
-# count(0)
+count(0) 
+
 
 
 def countTillFour(cnt):
@@ -19,5 +20,15 @@ def countTillFour(cnt):
     
 
 countTillFour(0)
-        
+
+
+# second version of printing name
+
+def nameAgain(i,name):  
+    if i>5:
+        return
+    print(name)
+    nameAgain(i+1,name)
+    
+nameAgain(1,"Aatif")
 
