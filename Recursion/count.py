@@ -1,9 +1,23 @@
-name = "aatif"
-def count(counter):
+# name = "aatif"
+# def count(counter):
     
-    if counter==5:
+#     if counter==5:
+#         return
+#     print(name)
+#     count(counter+1)
+    
+# count(0)
+
+
+def countTillFour(cnt):
+    if cnt==4:
         return
-    print(name)
-    count(counter+1)
     
-count(0)
+    print(cnt)
+    # cnt+=1
+    countTillFour(cnt+1)
+    
+
+countTillFour(0)
+        
+
