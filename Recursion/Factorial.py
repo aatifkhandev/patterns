@@ -10,3 +10,12 @@ def factorial(i,mul):
     
 
 print(factorial(3,1))
+
+
+def factorialF(n):
+    if n==0:
+        return 1
+    return n*factorialF(n-1)
+
+
+print(factorialF(5))
