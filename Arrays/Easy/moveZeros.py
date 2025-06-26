@@ -21,7 +21,7 @@ def moveZero(arr):
     
 
 
-# def moveZerosOptimized(arr:List[int],  n: int) -> int:
+def moveZerosOptimized(arr:List[int],  n: int) -> int:
     j = -1
     # Place the pointer j
     for i in range(n):
@@ -41,19 +41,20 @@ def moveZero(arr):
     
     return arr
 
+   
+def moveZeroBetter(arr):
+    count = 0
+        
+    for i in range(len(arr)):
+        if arr[i]!=0:
+            arr[count] = arr[i]
+            count+=1
+        
+    while count<len(arr):
+            arr[count] = 0
+            count+=1
+    
 
 arr = [1, 0, 2, 3, 2, 0, 0, 4, 5, 1]
-moveZero(arr)
+moveZeroBetter(arr)
 print(arr)
-# n = 10
-# ans = moveZerosOptimized(arr, n)
-# for it in ans:
-#     print(it, end=' ')
-# print()
-
-
-
-
-# arr = [1,0,2,0,3,0,4,5]
-# n = len(arr)
-# print(moveZero(arr,n))
