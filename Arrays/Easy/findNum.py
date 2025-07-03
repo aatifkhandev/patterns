@@ -2,8 +2,7 @@ from typing import List
 #find the number that appear once and other number's twice
 # Input:
 #  arr[] = {4,1,2,1,2}
-# Result:
-#  4
+
 
 def findNum(arr:List[int],n:int)->int:
     count=0
