@@ -1,4 +1,4 @@
-def missingNumber(arr):
+def missingNumberOptimizedOne(arr):
     n = len(arr)
     expected_sum = (n*(n+1)//2)
     actual_sum = 0
