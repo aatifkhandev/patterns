@@ -12,6 +12,16 @@ class Node{
     }
 }
 
+class List(){
+    Node *head;
+    Node *tail;
+
+    public:
+    List(){
+        head=tail=NULL
+    }
+};
+
 
 int main(){
     Node *newNode = new Node(5);
