@@ -3,3 +3,7 @@ class Node:
         self.data = val
         self.next = None
         
+class List:
+    def __init__(self):
+        self.head = None
+        self.tail = None
