@@ -8,18 +8,18 @@ class Node{
 
     Node(int val){
         data = val;
-        next = NULL
-    }
-}
+        next = NULL;
+    };
+};
 
-class List(){
+class List{
     Node *head;
     Node *tail;
 
     public:
     List(){
-        head=tail=NULL
-    }
+        head=tail=NULL;
+    };
     void push_front(int val){
         Node *newNode = new Node(val);
         if(head == NULL){
@@ -29,8 +29,16 @@ class List(){
             newNode->next = head;
             head = newNode;
         }
-    }
-    
+    };
+    void print(){
+        Node* temp = head;
+        while(temp!=NULL){
+            cout<<temp->data<<" ";
+            temp = temp->next;
+
+        }
+        cout<<endl;
+    };
 };
 
 
@@ -39,4 +47,5 @@ int main(){
     ll.push_front(1);
     ll.push_front(2);
     ll.push_front(3);
+    ll.print();
 }
