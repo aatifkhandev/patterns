@@ -51,7 +51,8 @@ def removeDup(arr):
             i+=1     
             arr[i] = arr[j]
     return i+1
-
+    
+# move zeros
 # def moveZeros(arr):
 #      i = 0
 #      for j in range(len(arr)):
