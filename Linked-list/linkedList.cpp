@@ -6,10 +6,11 @@ class Node{
     int data;
     Node *next;
 
-    Node(int val){
-        data = val;
-        next = NULL;
-    };
+    Node(int data){
+   this->data = data;
+   this->next = NULL;
+    }
+
 };
 
 class List{
@@ -18,34 +19,47 @@ class List{
 
     public:
     List(){
-        head=tail=NULL;
-    };
+        head = tail = NULL;
+    }
+    
     void push_front(int val){
-        Node *newNode = new Node(val);
         if(head == NULL){
-            head=tail=newNode;
-            return;
-        }else{
-            newNode->next = head;
-            head = newNode;
+            head = tail = NULL;
         }
-    };
-    void print(){
-        Node* temp = head;
-        while(temp!=NULL){
-            cout<<temp->data<<" ";
-            temp = temp->next;
+        Node *newNode = new Node(val);
+        newNode->next = head;
+        head = newNode;
+    }
 
+    void pop_back(){
+        if(head == NULL){
+            return;
+        }
+        Node *temp = head;
+        while(temp->next!=tail){
+            temp = temp->next;
+        }
+        temp->next = NULL;
+        delete tail;
+        tail = temp;
+    }
+
+    void print(){
+        Node *temp = head;
+        while(temp!=NULL){
+            cout<<temp->data;
+            temp = temp->next;
         }
         cout<<endl;
-    };
+    }
 };
-
 
 int main(){
     List ll;
     ll.push_front(1);
     ll.push_front(2);
     ll.push_front(3);
+    ll.print();
+    ll.pop_back();
     ll.print();
 }
